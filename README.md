@@ -30,14 +30,6 @@ I learn from problems, build small useful systems, put them into real
 environments, and improve them through feedback. Technology changes; the
 workflow stays consistent.
 
-<p align="center">
-  <img src="./assets/robot-arm.svg" alt="Animated six-axis robotic arm balancing a payload as a workflow metaphor" width="100%" />
-</p>
-
-<p align="center" style="color:#64748b">
-  <em>Illustrative motion study: build a mechanism, test its balance, and improve the next iteration.</em>
-</p>
-
 ## Selected work
 
 These are examples of projects built through the workflow—not the entire
