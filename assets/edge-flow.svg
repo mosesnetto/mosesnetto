@@ -14,10 +14,6 @@
       <stop offset="0" stop-color="#38bdf8"/>
       <stop offset="1" stop-color="#a78bfa"/>
     </linearGradient>
-    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
     <marker id="arrow-private" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
       <path d="M0 0 L9 4.5 L0 9Z" fill="#67e8f9"/>
     </marker>
@@ -50,7 +46,12 @@
       .aws-detail { --text-delay: 2.12s; }
       .cloud-label { --text-delay: 2.28s; }
       .legend-text { --text-delay: 2.44s; }
-      .flow { stroke-dasharray: 7 13; animation: travel 4.5s linear infinite; }
+      .flow { stroke-dasharray: 7 13; animation: travel 4.5s linear infinite; stroke-linecap: round; }
+      .liquid-shadow {
+        stroke-dasharray: 120 55;
+        animation: liquid-travel 3.8s linear infinite;
+        stroke-linecap: round;
+      }
       .node { animation: float 4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
       .node2 { animation: float 4s ease-in-out 1s infinite; transform-box: fill-box; transform-origin: center; }
       @keyframes text-reveal {
@@ -58,9 +59,10 @@
         100% { opacity: 1; transform: translateY(0) scale(1); }
       }
       @keyframes travel { to { stroke-dashoffset: -100; } }
+      @keyframes liquid-travel { to { stroke-dashoffset: -240; } }
       @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
       @media (prefers-reduced-motion: reduce) {
-        .ui text, .flow, .node, .node2 { animation: none; opacity: 1; }
+        .ui text, .flow, .liquid-shadow, .node, .node2 { animation: none; opacity: 1; }
         .ui text { transform: none; }
       }
     </style>
@@ -79,13 +81,14 @@
     <rect x="62" y="142" width="178" height="116" rx="16" fill="url(#panel)" stroke="#38bdf8" stroke-opacity=".65"/>
     <text x="151" y="174" class="remote-title" text-anchor="middle" font-size="16" font-weight="700" fill="#f8fafc">REMOTE DEVICES</text>
     <text x="151" y="199" class="remote-detail" text-anchor="middle" font-size="12" fill="#94a3b8">laptops · tablets · phones</text>
-    <circle cx="112" cy="226" r="6" fill="#38bdf8" filter="url(#glow)"/>
-    <circle cx="151" cy="226" r="6" fill="#5eead4" filter="url(#glow)"/>
-    <circle cx="190" cy="226" r="6" fill="#a78bfa" filter="url(#glow)"/>
+    <circle cx="112" cy="226" r="6" fill="#38bdf8"/>
+    <circle cx="151" cy="226" r="6" fill="#5eead4"/>
+    <circle cx="190" cy="226" r="6" fill="#a78bfa"/>
   </g>
 
   <!-- tailscale link -->
   <path d="M240 200 C 292 200, 300 200, 348 200" fill="none" stroke="#164e63" stroke-width="8" stroke-linecap="round"/>
+  <path class="liquid-shadow" d="M240 200 C 292 200, 300 200, 348 200" fill="none" stroke="url(#private)" stroke-width="20" opacity=".16"/>
   <path class="flow" d="M240 200 C 292 200, 300 200, 348 200" fill="none" stroke="url(#private)" stroke-width="3" marker-end="url(#arrow-private)"/>
   <text x="294" y="181" text-anchor="middle" class="ui caps tailscale-label" font-size="10" fill="#67e8f9">Tailscale VPN</text>
 
@@ -111,6 +114,7 @@
     <text x="738" y="224" text-anchor="middle" class="plc-detail" font-size="11" fill="#6ee7b7">holding registers</text>
   </g>
   <path d="M586 200 C 612 200, 622 200, 656 200" fill="none" stroke="#14532d" stroke-width="7" stroke-linecap="round"/>
+  <path class="liquid-shadow" d="M586 200 C 612 200, 622 200, 656 200" fill="none" stroke="#34d399" stroke-width="18" opacity=".16"/>
   <path class="flow" d="M586 200 C 612 200, 622 200, 656 200" fill="none" stroke="#34d399" stroke-width="3" marker-end="url(#arrow-private)"/>
   <text x="621" y="181" text-anchor="middle" class="ui caps modbus-label" font-size="10" fill="#6ee7b7">MODBUS TCP / 502</text>
 
@@ -122,6 +126,7 @@
     <text x="1029" y="224" text-anchor="middle" class="aws-detail" font-size="11" fill="#94a3b8">X.509 · topic policy</text>
   </g>
   <path d="M586 328 C 740 328, 780 210, 920 197" fill="none" stroke="#312e81" stroke-width="7" stroke-linecap="round"/>
+  <path class="liquid-shadow" d="M586 328 C 740 328, 780 210, 920 197" fill="none" stroke="url(#cloud)" stroke-width="20" opacity=".14"/>
   <path class="flow" d="M586 328 C 740 328, 780 210, 920 197" fill="none" stroke="url(#cloud)" stroke-width="3" marker-end="url(#arrow-cloud)"/>
   <text x="758" y="300" text-anchor="middle" class="ui caps cloud-label" font-size="10" fill="#c4b5fd">OUTBOUND CLOUD LINK</text>
 
