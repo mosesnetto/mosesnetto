@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
-  <title id="title">Mosesnetto industrial telemetry and edge systems</title>
-  <desc id="desc">An animated dark banner showing a signal moving from a PLC through a Raspberry Pi edge gateway to AWS IoT.</desc>
+  <title id="title">Mosesnetto workflow</title>
+  <desc id="desc">An animated profile banner showing the workflow idea, learn, build, deploy, improve.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#07111f"/>
@@ -21,7 +21,7 @@
       <animate attributeName="x1" values="0;1200;0" dur="7s" repeatCount="indefinite"/>
       <animate attributeName="x2" values="1200;0;1200" dur="7s" repeatCount="indefinite"/>
     </linearGradient>
-    <path id="hero-flow-path" d="M 54 294 C 170 294, 180 294, 276 294 S 402 294, 490 294 S 612 294, 700 294 S 824 294, 908 294 S 1046 294, 1146 294" fill="none"/>
+    <path id="workflow-flow-path" d="M 54 294 C 160 294, 170 294, 250 294 S 420 294, 500 294 S 670 294, 750 294 S 920 294, 1000 294 S 1090 294, 1146 294" fill="none"/>
     <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
       <path d="M 36 0 L 0 0 0 36" fill="none" stroke="#8ba4c7" stroke-opacity="0.09" stroke-width="1"/>
     </pattern>
@@ -38,20 +38,21 @@
         animation: text-reveal 900ms cubic-bezier(.2,.8,.2,1) both;
         animation-delay: var(--text-delay, 0s);
       }
-      .hero-kicker { --text-delay: .12s; }
-      .hero-title {
+      .workflow-kicker { --text-delay: .12s; }
+      .workflow-title {
         --text-delay: .26s;
         animation-name: headline-reveal;
         animation-duration: 1200ms;
       }
-      .hero-subtitle { --text-delay: .58s; }
-      .hero-route { --text-delay: .76s; }
-      .hero-stack { --text-delay: .92s; }
-      .node-plc { --text-delay: 1.08s; }
-      .node-pi { --text-delay: 1.22s; }
-      .node-aws { --text-delay: 1.36s; }
-      .status-label { --text-delay: 1.52s; }
-      .status-value { --text-delay: 1.66s; }
+      .workflow-subtitle { --text-delay: .58s; }
+      .workflow-route { --text-delay: .76s; }
+      .workflow-stack { --text-delay: .92s; }
+      .node-learn { --text-delay: 1.08s; }
+      .node-build { --text-delay: 1.22s; }
+      .node-deploy { --text-delay: 1.36s; }
+      .node-improve { --text-delay: 1.50s; }
+      .status-label { --text-delay: 1.66s; }
+      .status-value { --text-delay: 1.80s; }
       .liquid-shadow {
         stroke-dasharray: 180 80;
         animation: liquid-travel 4.8s linear infinite;
@@ -99,54 +100,59 @@
   <circle cx="260" cy="304" r="1.6" fill="#67e8f9" opacity=".55"/>
 
   <g class="ui">
-    <text x="64" y="70" class="caps hero-kicker" font-size="13" font-weight="700" fill="#5eead4">PRIVATE PREVIEW  /  EDGE SYSTEMS</text>
-    <text x="62" y="139" class="hero-title" font-size="48" font-weight="800" letter-spacing="1" fill="#f8fafc">MOSESNETTO</text>
-    <text x="65" y="178" class="hero-subtitle" font-size="19" font-weight="500" fill="#cbd5e1">Industrial telemetry  ·  secure connectivity  ·  edge deployment</text>
-    <text x="65" y="218" class="hero-route" font-size="15" font-weight="600" fill="#67e8f9">MODBUS  →  RASPBERRY PI  →  AWS IOT</text>
-    <text x="65" y="250" class="caps hero-stack" font-size="12" fill="#94a3b8">MQTT / TLS  ·  TAILSCALE  ·  XRDP  ·  FLASK</text>
+    <text x="64" y="70" class="caps workflow-kicker" font-size="13" font-weight="700" fill="#5eead4">MY WORKFLOW  /  BUILDING IN PUBLIC</text>
+    <text x="62" y="139" class="workflow-title" font-size="48" font-weight="800" letter-spacing="1" fill="#f8fafc">MOSESNETTO</text>
+    <text x="65" y="178" class="workflow-subtitle" font-size="19" font-weight="500" fill="#cbd5e1">Learn  ·  Build  ·  Deploy  ·  Improve</text>
+    <text x="65" y="218" class="workflow-route" font-size="15" font-weight="600" fill="#67e8f9">IDEA  →  SYSTEM  →  IMPACT</text>
+    <text x="65" y="250" class="caps workflow-stack" font-size="12" fill="#94a3b8">CODE  ·  HARDWARE  ·  OPERATIONS  ·  FEEDBACK</text>
   </g>
 
   <g opacity=".95">
-    <path d="M 54 294 C 170 294, 180 294, 276 294 S 402 294, 490 294 S 612 294, 700 294 S 824 294, 908 294 S 1046 294, 1146 294" fill="none" stroke="#1e3a5f" stroke-width="10" stroke-linecap="round" opacity=".7"/>
-    <path class="liquid-shadow" d="M 54 294 C 170 294, 180 294, 276 294 S 402 294, 490 294 S 612 294, 700 294 S 824 294, 908 294 S 1046 294, 1146 294" fill="none" stroke="url(#liquid)" stroke-width="28" opacity=".16"/>
-    <path class="liquid-wave" d="M 54 276 C 170 276, 180 284, 276 276 S 402 268, 490 276 S 612 284, 700 276 S 824 268, 908 276 S 1046 284, 1146 276" fill="none" stroke="url(#liquid)" stroke-width="1.5" opacity=".52"/>
-    <path class="liquid-stream" d="M 54 294 C 170 294, 180 294, 276 294 S 402 294, 490 294 S 612 294, 700 294 S 824 294, 908 294 S 1046 294, 1146 294" fill="none" stroke="url(#signal)" stroke-width="3.5" marker-end="url(#arrow)"/>
+    <path d="M 54 294 C 160 294, 170 294, 250 294 S 420 294, 500 294 S 670 294, 750 294 S 920 294, 1000 294 S 1090 294, 1146 294" fill="none" stroke="#1e3a5f" stroke-width="10" stroke-linecap="round" opacity=".7"/>
+    <path class="liquid-shadow" d="M 54 294 C 160 294, 170 294, 250 294 S 420 294, 500 294 S 670 294, 750 294 S 920 294, 1000 294 S 1090 294, 1146 294" fill="none" stroke="url(#liquid)" stroke-width="28" opacity=".16"/>
+    <path class="liquid-wave" d="M 54 276 C 160 276, 170 284, 250 276 S 420 268, 500 276 S 670 284, 750 276 S 920 268, 1000 276 S 1090 284, 1146 276" fill="none" stroke="url(#liquid)" stroke-width="1.5" opacity=".52"/>
+    <path class="liquid-stream" d="M 54 294 C 160 294, 170 294, 250 294 S 420 294, 500 294 S 670 294, 750 294 S 920 294, 1000 294 S 1090 294, 1146 294" fill="none" stroke="url(#signal)" stroke-width="3.5" marker-end="url(#arrow)"/>
     <circle class="particle" r="3.5" fill="#5eead4">
-      <animateMotion dur="4.8s" repeatCount="indefinite"><mpath href="#hero-flow-path" xlink:href="#hero-flow-path"/></animateMotion>
+      <animateMotion dur="4.8s" repeatCount="indefinite"><mpath href="#workflow-flow-path" xlink:href="#workflow-flow-path"/></animateMotion>
     </circle>
     <circle class="particle" r="3" fill="#c4b5fd">
-      <animateMotion dur="4.8s" begin="-2.4s" repeatCount="indefinite"><mpath href="#hero-flow-path" xlink:href="#hero-flow-path"/></animateMotion>
+      <animateMotion dur="4.8s" begin="-2.4s" repeatCount="indefinite"><mpath href="#workflow-flow-path" xlink:href="#workflow-flow-path"/></animateMotion>
     </circle>
-    <circle class="pulse" cx="276" cy="294" r="8" fill="#2dd4bf"/>
-    <circle class="pulse-delay" cx="700" cy="294" r="8" fill="#38bdf8"/>
-    <circle class="pulse" cx="1046" cy="294" r="7" fill="#a78bfa"/>
+    <circle class="pulse" cx="250" cy="294" r="7" fill="#2dd4bf"/>
+    <circle class="pulse-delay" cx="500" cy="294" r="7" fill="#38bdf8"/>
+    <circle class="pulse" cx="750" cy="294" r="7" fill="#818cf8"/>
+    <circle class="pulse-delay" cx="1000" cy="294" r="7" fill="#a78bfa"/>
   </g>
 
   <g class="ui" font-size="11" text-anchor="middle">
-    <g transform="translate(276 294)">
+    <g transform="translate(250 294)">
       <circle r="25" fill="#0f2534" stroke="#2dd4bf" stroke-opacity=".6"/>
-      <path d="M -10 7 V -7 L 0 1 L 10 -7 V 7" fill="none" stroke="#5eead4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-      <text y="48" class="node-plc" fill="#94a3b8">PLC / MODBUS</text>
+      <path d="M -10 -7 L 0 -12 L 10 -7 V 5 L 0 11 L -10 5 Z M -10 -7 L 0 -2 L 10 -7 M 0 -2 V 11" fill="none" stroke="#5eead4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text y="48" class="node-learn" fill="#94a3b8">LEARN</text>
     </g>
-    <g transform="translate(700 294)">
-      <rect x="-34" y="-25" width="68" height="50" rx="10" fill="#122544" stroke="#38bdf8" stroke-opacity=".7"/>
-      <path d="M -18 -11 H 18 M -18 0 H 18 M -18 11 H 7" stroke="#7dd3fc" stroke-width="2" stroke-linecap="round"/>
-      <circle cx="17" cy="11" r="3" fill="#5eead4"/>
-      <text y="48" class="node-pi" fill="#94a3b8">PI 5 EDGE</text>
+    <g transform="translate(500 294)">
+      <rect x="-25" y="-25" width="50" height="50" rx="10" fill="#122544" stroke="#38bdf8" stroke-opacity=".7"/>
+      <path d="M -8 -10 L -17 0 L -8 10 M 8 -10 L 17 0 L 8 10 M 3 -13 L -3 13" fill="none" stroke="#7dd3fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text y="48" class="node-build" fill="#94a3b8">BUILD</text>
     </g>
-    <g transform="translate(1046 294)">
-      <path d="M -21 10 C -26 -4 -14 -9 -7 -3 C -2 -19 19 -17 20 -2 C 32 -1 32 16 21 16 H -18 C -25 16 -26 11 -21 10Z" fill="#211b46" stroke="#a78bfa" stroke-opacity=".8"/>
-      <path d="M -9 3 H 10 M -9 9 H 4" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round"/>
-      <text y="48" class="node-aws" fill="#94a3b8">AWS IOT</text>
+    <g transform="translate(750 294)">
+      <circle r="25" fill="#171b3b" stroke="#818cf8" stroke-opacity=".7"/>
+      <path d="M -10 10 V -7 L 0 -14 L 10 -7 V 10 Z M -5 10 V 1 H 5 V 10 M 0 -14 V -20 M -4 -16 L 0 -20 L 4 -16" fill="none" stroke="#c4b5fd" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text y="48" class="node-deploy" fill="#94a3b8">DEPLOY</text>
+    </g>
+    <g transform="translate(1000 294)">
+      <circle r="25" fill="#211b46" stroke="#a78bfa" stroke-opacity=".8"/>
+      <path d="M 10 -7 A 12 12 0 1 0 12 6 M 10 -7 V -15 M 10 -7 H 2" fill="none" stroke="#c4b5fd" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text y="48" class="node-improve" fill="#94a3b8">IMPROVE</text>
     </g>
   </g>
 
   <g class="ui" transform="translate(1000 62)">
     <rect width="142" height="58" rx="12" fill="#0c1a2d" stroke="#334155"/>
-    <text x="16" y="22" class="caps status-label" font-size="10" fill="#64748b">BUILD MODE</text>
+    <text x="16" y="22" class="caps status-label" font-size="10" fill="#64748b">WORKFLOW MODE</text>
     <circle cx="18" cy="41" r="4" fill="#34d399">
       <animate attributeName="opacity" values="0.35;1;0.35" dur="2.4s" repeatCount="indefinite"/>
     </circle>
-    <text x="31" y="45" class="status-value" font-size="12" font-weight="700" fill="#d1fae5">PRIVATE &amp; REAL</text>
+    <text x="31" y="45" class="status-value" font-size="12" font-weight="700" fill="#d1fae5">MAKE IT REAL</text>
   </g>
 </svg>

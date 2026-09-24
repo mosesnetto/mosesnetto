@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/hero.svg" alt="Animated Mosesnetto industrial telemetry and edge systems banner" width="100%" />
+  <img src="./assets/hero.svg" alt="Animated Mosesnetto workflow: learn, build, deploy, improve" width="100%" />
 </p>
 
 <p align="center">
@@ -12,17 +12,28 @@
 </p>
 
 <p align="center">
-  <strong>Industrial telemetry · AWS IoT · Private edge connectivity</strong><br />
-  <span style="color:#94a3b8">Building practical systems that keep credentials, PLC networks, and cloud access under control.</span>
+  <strong>Learn · Build · Deploy · Improve</strong><br />
+  <span style="color:#94a3b8">Turning ideas into practical, reliable systems through continuous learning and iteration.</span>
 </p>
 
 ---
 
-## What I’m building
+## My workflow
 
-I’m developing a private-preview telemetry stack for industrial environments:
-reliable Modbus reads, secure AWS IoT publishing, and private remote operations
-through a Raspberry Pi edge host.
+I work iteratively:
+
+```text
+LEARN  →  BUILD  →  DEPLOY  →  IMPROVE
+```
+
+I learn from problems, build small useful systems, put them into real
+environments, and improve them through feedback. Technology changes; the
+workflow stays consistent.
+
+## Selected work
+
+These are examples of projects built through the workflow—not the entire
+scope of my work.
 
 ### Modbus AWS Logger — private preview
 
