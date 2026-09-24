@@ -127,6 +127,27 @@ These are concrete next steps, not claims about current functionality:
 
 ---
 
+## More public work
+
+### Career Guidance Chatbot
+
+[ChatBot-For-Carrier-Guidance](https://github.com/mosesnetto/ChatBot-For-Carrier-Guidance) ·
+Python · PyTorch · NLTK · Flask
+
+An offline AI career-guidance chatbot with intent classification, confidence
+gating, a web chat UI, a terminal interface, reproducible training, tests, and
+CI.
+
+### MCC Machine Shift Monitor
+
+[machine-monitor](https://github.com/mosesnetto/machine-monitor) ·
+Python · Raspberry Pi 5 · Telegram · 4G/A7670E
+
+A Raspberry Pi 5 machine-shift monitor with downtime alerts, shift-aware
+reports, offline text-to-speech, and optional real phone-call notifications.
+
+---
+
 ## GitHub
 
 <p align="center">
