@@ -170,3 +170,12 @@ reports, offline text-to-speech, and optional real phone-call notifications.
 <p align="center" style="color:#64748b">
   Building secure industrial telemetry from the edge to the cloud.
 </p>
+
+## Freelance Industrial IoT
+
+Available for edge-to-cloud telemetry, PLC integration, commissioning automation, and industrial architecture reviews.
+
+- [Portfolio](https://mosesnetto.github.io/portfolio/)
+- [LinkedIn](https://www.linkedin.com/in/moses-netto-361a61314/)
+- [Calendly](https://calendly.com/mosesnetto/30min)
+- [Email](mailto:mosesnetto@gmail.com)
